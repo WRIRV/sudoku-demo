@@ -1,0 +1,23 @@
+.sudoku-level{
+    border: 2px solid #5e5e5e;
+    border-radius: 2px;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+td{
+    border: 1px solid #5a696d;
+}
+
+.number-element{
+    user-select: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #3a4042;
+    font-size: 64px;
+    margin: 0;
+    text-align: center;
+
+    display: block;
+    width: 80px;
+    height: 80px;
+}
