@@ -64,16 +64,25 @@ class Sudoku{
         const table = document.createElement('table');
         table.classList.add('sudoku-level');
 
-        for(let row of this.grid){
+        for(let i = 0; i < this.grid.length; i++){
             const tr = document.createElement('tr');
+            //
+            if((i+1) % this.area === 0 && ((i+1) != Math.pow(this.area, 2))){
+                tr.style.borderBottom = '5px solid black';
+                console.log(1)
+            }
 
-            for(let num of row){
+            for(let j = 0; j < this.grid[i].length; j++){
                 const td = document.createElement('td');
                 const p = document.createElement('p');
                 p.classList.add('number-element');
                 //нищинский код ниже
+                if((j+1) % this.area === 0 && ((j+1) != Math.pow(this.area, 2))){
+                    td.style.borderRight = '5px solid black';
+                }
+
                 if(Math.random() <= 0.7){
-                    p.textContent = num;
+                    p.textContent = this.grid[i][j];
                 }
                 else{
                     p.textContent = ' ';
